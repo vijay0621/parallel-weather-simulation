@@ -1,0 +1,395 @@
+{
+  "last_updated": "2025-09-15T04:57:03.759086+00:00",
+  "districts": [
+    {
+      "district": "Ariyalur",
+      "query": "Ariyalur",
+      "processor_rank": 0,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Ariyalur%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Chengalpattu",
+      "query": "Chengalpattu",
+      "processor_rank": 0,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Chengalpattu%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Chennai",
+      "query": "Chennai",
+      "processor_rank": 0,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Chennai%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Coimbatore",
+      "query": "Coimbatore",
+      "processor_rank": 0,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Coimbatore%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Cuddalore",
+      "query": "Cuddalore",
+      "processor_rank": 0,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Cuddalore%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Dharmapuri",
+      "query": "Dharmapuri",
+      "processor_rank": 0,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Dharmapuri%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Dindigul",
+      "query": "Dindigul",
+      "processor_rank": 0,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Dindigul%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Erode",
+      "query": "Erode",
+      "processor_rank": 0,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Erode%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Kallakurichi",
+      "query": "Kallakurichi",
+      "processor_rank": 1,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Kallakurichi%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Kanchipuram",
+      "query": "Kanchipuram",
+      "processor_rank": 1,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Kanchipuram%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Kanyakumari",
+      "query": "Nagercoil",
+      "processor_rank": 1,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Nagercoil%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Karur",
+      "query": "Karur",
+      "processor_rank": 1,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Karur%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Krishnagiri",
+      "query": "Krishnagiri",
+      "processor_rank": 1,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Krishnagiri%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Madurai",
+      "query": "Madurai",
+      "processor_rank": 1,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Madurai%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Mayiladuthurai",
+      "query": "Mayiladuthurai",
+      "processor_rank": 1,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Mayiladuthurai%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Nagapattinam",
+      "query": "Nagapattinam",
+      "processor_rank": 1,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Nagapattinam%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Namakkal",
+      "query": "Namakkal",
+      "processor_rank": 2,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Namakkal%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Nilgiris",
+      "query": "Udhagamandalam",
+      "processor_rank": 2,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Udhagamandalam%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Perambalur",
+      "query": "Perambalur",
+      "processor_rank": 2,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Perambalur%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Pudukkottai",
+      "query": "Pudukkottai",
+      "processor_rank": 2,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Pudukkottai%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Ramanathapuram",
+      "query": "Ramanathapuram",
+      "processor_rank": 2,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Ramanathapuram%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Ranipet",
+      "query": "Ranipet",
+      "processor_rank": 2,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Ranipet%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Salem",
+      "query": "Salem",
+      "processor_rank": 2,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Salem%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Sivaganga",
+      "query": "Sivaganga",
+      "processor_rank": 2,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Sivaganga%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Tenkasi",
+      "query": "Tenkasi",
+      "processor_rank": 3,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Tenkasi%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Thanjavur",
+      "query": "Thanjavur",
+      "processor_rank": 3,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Thanjavur%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Theni",
+      "query": "Theni",
+      "processor_rank": 3,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Theni%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Thoothukudi",
+      "query": "Thoothukudi",
+      "processor_rank": 3,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Thoothukudi%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Tiruchirappalli",
+      "query": "Tiruchirappalli",
+      "processor_rank": 3,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Tiruchirappalli%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Tirunelveli",
+      "query": "Tirunelveli",
+      "processor_rank": 3,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Tirunelveli%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Tirupathur",
+      "query": "Tirupathur",
+      "processor_rank": 3,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Tirupathur%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Tiruppur",
+      "query": "Tiruppur",
+      "processor_rank": 4,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Tiruppur%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Tiruvallur",
+      "query": "Tiruvallur",
+      "processor_rank": 4,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Tiruvallur%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Tiruvannamalai",
+      "query": "Tiruvannamalai",
+      "processor_rank": 4,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Tiruvannamalai%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Tiruvarur",
+      "query": "Tiruvarur",
+      "processor_rank": 4,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Tiruvarur%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Vellore",
+      "query": "Vellore",
+      "processor_rank": 4,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Vellore%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Viluppuram",
+      "query": "Viluppuram",
+      "processor_rank": 4,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Viluppuram%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    },
+    {
+      "district": "Virudhunagar",
+      "query": "Virudhunagar",
+      "processor_rank": 4,
+      "temperature_c": null,
+      "humidity_pct": null,
+      "wind_speed_ms": null,
+      "rainfall_mm": null,
+      "error": "401 Client Error: Unauthorized for url: https://api.openweathermap.org/data/2.5/weather?q=Virudhunagar%2C+Tamil+Nadu%2C+IN&appid=REPLACE_WITH_YOUR_KEY&units=metric"
+    }
+  ],
+  "averages": {
+    "temperature_c": null,
+    "humidity_pct": null,
+    "wind_speed_ms": null,
+    "rainfall_mm": null
+  },
+  "meta": {
+    "total_districts": 38,
+    "mpi_processes": 5
+  }
+}
