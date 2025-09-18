@@ -28,10 +28,19 @@
 		<button data-chart="humidity">Humidity</button>
 		<button data-chart="rain">Rainfall</button>
 		<button data-chart="wind">Wind Speed</button>
+		<select id="timeframe">
+			<option value="current" selected>Current</option>
+			<option value="history">Past 7 days</option>
+			<option value="forecast">Next 7 days</option>
+		</select>
 	</section>
 
 	<section class="charts">
 		<canvas id="chartCanvas"></canvas>
+		<div class="workload">
+			<h3>MPI Workload Distribution</h3>
+			<canvas id="workloadCanvas"></canvas>
+		</div>
 	</section>
 
 	<section>
