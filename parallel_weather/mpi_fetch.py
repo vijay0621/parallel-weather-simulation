@@ -150,7 +150,7 @@ def fetch_onecall_timemachine(session: requests.Session, api_key: str, lat: floa
 	return aggregate_hourly_to_daily(hourly)
 
 
-def fetch_onecall_forecast_daily(session: requests.Session, api_key: str, lat: float, lon: float) -> List[Dict[str, Optional[float]]]:
+def fetch_onecall_forecast_daily(session: requests.Session, api_key: str, lat: float, lon: float) -> List[Dict[str, Any]]:
 	params = {
 		"lat": lat,
 		"lon": lon,
@@ -162,10 +162,18 @@ def fetch_onecall_forecast_daily(session: requests.Session, api_key: str, lat: f
 	resp.raise_for_status()
 	payload = resp.json()
 	daily = payload.get("daily", [])
-	results: List[Dict[str, Optional[float]]] = []
+	results: List[Dict[str, Any]] = []
 	for d in daily:
+		dt_val = d.get("dt")
+		date_iso = None
+		if dt_val is not None:
+			try:
+				date_iso = datetime.fromtimestamp(int(dt_val), tz=timezone.utc).date().isoformat()
+			except Exception:
+				date_iso = None
 		temp = d.get("temp") or {}
 		metrics = {
+			"date": date_iso,
 			"temperature_c": float(temp.get("day")) if temp.get("day") is not None else None,
 			"humidity_pct": float(d.get("humidity")) if d.get("humidity") is not None else None,
 			"wind_speed_ms": float(d.get("wind_speed")) if d.get("wind_speed") is not None else None,
@@ -259,13 +267,14 @@ def main() -> None:
 						"dt": int(dt.timestamp()),
 						"date_iso": dt.date().isoformat(),
 					})
-				forecast_tasks.append({
-					"district": d,
-					"query": r["query"],
-					"lat": coord["lat"],
-					"lon": coord["lon"],
-					"date_isos": [dd.date().isoformat() for dd in fc_dates],
-				})
+				for dt in fc_dates:
+					forecast_tasks.append({
+						"district": d,
+						"query": r["query"],
+						"lat": coord["lat"],
+						"lon": coord["lon"],
+						"date_iso": dt.date().isoformat(),
+					})
 			else:
 				# No coord -> still create placeholder tasks to propagate errors/missing
 				for dt in hist_dates:
@@ -277,13 +286,14 @@ def main() -> None:
 						"dt": int(dt.timestamp()),
 						"date_iso": dt.date().isoformat(),
 					})
-				forecast_tasks.append({
-					"district": d,
-					"query": r["query"],
-					"lat": None,
-					"lon": None,
-					"date_isos": [dd.date().isoformat() for dd in fc_dates],
-				})
+				for dt in fc_dates:
+					forecast_tasks.append({
+						"district": d,
+						"query": r["query"],
+						"lat": None,
+						"lon": None,
+						"date_iso": dt.date().isoformat(),
+					})
 
 		# Split tasks among ranks
 		def split_tasks(tasks: List[Dict[str, Any]], workers: int) -> List[List[Dict[str, Any]]]:
@@ -339,45 +349,50 @@ def main() -> None:
 				"error": str(exc),
 			})
 
-	# PHASE 2b: Forecast (next 7 days). We fetch once per district and expand to daily entries
+	# PHASE 2b: Forecast (next 7 days). One task per district×day for temporal parallelism
 	local_fc_results: List[Dict[str, Any]] = []
 	for t in local_fc_tasks:
 		if t["lat"] is None or t["lon"] is None:
-			for date_iso in t["date_isos"]:
-				local_fc_results.append({
-					"district": t["district"],
-					"date_iso": date_iso,
-					"processor_rank": rank,
-					"temperature_c": None,
-					"humidity_pct": None,
-					"wind_speed_ms": None,
-					"rainfall_mm": None,
-					"error": "Missing coordinates from current weather phase",
-				})
+			local_fc_results.append({
+				"district": t["district"],
+				"date_iso": t["date_iso"],
+				"processor_rank": rank,
+				"temperature_c": None,
+				"humidity_pct": None,
+				"wind_speed_ms": None,
+				"rainfall_mm": None,
+				"error": "Missing coordinates from current weather phase",
+			})
 			continue
 		try:
 			daily_list = fetch_onecall_forecast_daily(session, api_key, float(t["lat"]), float(t["lon"]))
-			# Align by available days up to requested 7
-			for i, date_iso in enumerate(t["date_isos"]):
-				metrics = daily_list[i] if i < len(daily_list) else {"temperature_c": None, "humidity_pct": None, "wind_speed_ms": None, "rainfall_mm": None}
-				local_fc_results.append({
-					"district": t["district"],
-					"date_iso": date_iso,
-					"processor_rank": rank,
-					**metrics,
-				})
+			# pick the daily entry matching the requested date
+			match = None
+			for d in daily_list:
+				if d.get("date") == t["date_iso"]:
+					match = d
+					break
+			metrics = match or {"temperature_c": None, "humidity_pct": None, "wind_speed_ms": None, "rainfall_mm": None}
+			local_fc_results.append({
+				"district": t["district"],
+				"date_iso": t["date_iso"],
+				"processor_rank": rank,
+				"temperature_c": metrics.get("temperature_c"),
+				"humidity_pct": metrics.get("humidity_pct"),
+				"wind_speed_ms": metrics.get("wind_speed_ms"),
+				"rainfall_mm": metrics.get("rainfall_mm"),
+			})
 		except Exception as exc:  # noqa: BLE001
-			for date_iso in t["date_isos"]:
-				local_fc_results.append({
-					"district": t["district"],
-					"date_iso": date_iso,
-					"processor_rank": rank,
-					"temperature_c": None,
-					"humidity_pct": None,
-					"wind_speed_ms": None,
-					"rainfall_mm": None,
-					"error": str(exc),
-				})
+			local_fc_results.append({
+				"district": t["district"],
+				"date_iso": t["date_iso"],
+				"processor_rank": rank,
+				"temperature_c": None,
+				"humidity_pct": None,
+				"wind_speed_ms": None,
+				"rainfall_mm": None,
+				"error": str(exc),
+			})
 
 	gathered_hist: List[List[Dict[str, Any]]] = comm.gather(local_hist_results, root=0)
 	gathered_fc: List[List[Dict[str, Any]]] = comm.gather(local_fc_results, root=0)
